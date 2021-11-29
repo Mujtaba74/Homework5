@@ -38,8 +38,8 @@ public class Test {   //Testing
 	public static void main(String[] args) {
 		RegularPay r1 = new RegularPay(35);
 		HazardPay h1 = new HazardPay(35);
-		System.out.println("Regular Pay for 5 hours is " + r1.computePay(5));
-		System.out.println("Hazard Pay for 5 hours is " + h1.computePay(5));
+		System.out.println("Regular Pay for 5 hours is " +"$"+r1.computePay(5));
+		System.out.println("Hazard Pay for 5 hours is +"$"+ h1.computePay(5));
 	
 }
 }
