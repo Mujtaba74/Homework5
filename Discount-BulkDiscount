@@ -1,0 +1,48 @@
+public abstract class DiscountPolicy {
+
+	public abstract double computeDiscount(int count, double itemCost);
+	
+
+	public static void main(String[] args) {
+		
+
+	}
+
+}
+
+//Bulk Dicount 
+
+public class BulkDiscount extends DiscountPolicy{
+	
+	int minimum; 
+	double percent;
+	
+	
+	
+
+	public BulkDiscount(int min, double per) {
+		minimum = min;
+		percent = per;
+		
+		
+	}
+
+
+	public double computeDiscount(int count, double itemCost) {
+		if(count>minimum) {
+			return percent*itemCost*count/100;
+		}
+		else {
+		return 0;
+	}
+}
+	public static void main(String[] args) {
+		BulkDiscount test = new BulkDiscount(5,20);
+		
+		System.out.println(test.computeDiscount(10, 100));
+		System.out.println(test.computeDiscount(4, 100000));
+		System.out.println(test.computeDiscount(20, 1));
+		
+	}
+	
+}
